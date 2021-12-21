@@ -1,23 +1,22 @@
-import React, {useState} from "react";
+// item`forms
+import React from "react";
+
+
+function ItemForm({ inputFunk1, categoryFunk1, onItemFormSubmit }) {
 
 
 
-
-function ItemForm({ handleName, handleCategory, onItemFormSubmit }) {
 
   return (
-    <form onSubmit ={onItemFormSubmit} className="NewItem">
+    <form onSubmit={onItemFormSubmit} className="NewItem">
       <label>
         Name:
-        <input onChange={handleName}
-               type="text" 
-               name="name" />
+        <input onChange={inputFunk1} type="text" name="name" />
       </label>
 
       <label>
         Category:
-        <select onSubmit={handleCategory}
-                name="category">
+        <select onChange={categoryFunk1} name="category">
           <option value="Produce">Produce</option>
           <option value="Dairy">Dairy</option>
           <option value="Dessert">Dessert</option>
@@ -28,14 +27,5 @@ function ItemForm({ handleName, handleCategory, onItemFormSubmit }) {
     </form>
   );
 }
-  
-  // const [name, setName] = useState("")
-  // const [category, setCategory] = useState("Produce")
-  // const [submittedData, setSubmittedData] = useState([])
-  
-
-
-
-
 
 export default ItemForm;

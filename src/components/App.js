@@ -1,3 +1,4 @@
+// app
 import React, { useState } from "react";
 import ShoppingList from "./ShoppingList";
 import Header from "./Header";
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
-      <ShoppingList items={items} onItemFormSubmit={setItems}/>
+      <ShoppingList items={items} />
     </div>
   );
 }
